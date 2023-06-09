@@ -1,0 +1,86 @@
+//样式重写
+
+div.el-message-box {
+	padding: 0;
+	border: none;
+    border-radius: 0;
+	.el-message-box__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		// border-bottom: 1px solid #dedede;
+		padding: 10px 15px;
+		//background-color: $main_color;
+		background-color: var(--main-color, $main_color);
+		.el-message-box__title {
+			font-size: 14px;
+			color: #fff;
+		}
+		.el-message-box__headerbtn {
+			position: static;
+			.el-message-box__close {
+				color: #fff;
+			}
+		}
+	}
+	.el-message-box__btns {
+		display: flex;
+		justify-content: center;
+		padding: 20px 0 15px;
+		.el-button--small {
+			width: 100px;
+		}
+	}
+	.el-message-box__content {
+		.el-message-box__container {
+            height: 100%;
+			margin-top: 20px;
+            .el-message-box__status{
+                //color: #06a7ff;
+                color: var(--main-color, $main_color);
+                opacity: .5;
+            }
+			.el-message-box__message{
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+div.el-dialog {
+	padding: 0;
+	.el-dialog__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 15px;
+		//background-color: $main_color;
+		background-color: var(--main-color, $main_color);
+		.el-dialog__title {
+			font-size: 14px;
+			color: #fff;
+		}
+		.el-dialog__headerbtn {
+			position: static;
+			.el-dialog__close {
+				color: #fff;
+			}
+		}
+	}
+	.el-dialog__body {
+		background-color: #f5f6fa;
+		padding: 0px;
+	}
+	.el-dialog__footer {
+		display: flex;
+		justify-content: center;
+		padding: 10px;
+		background-color: #f5f6fa;
+		font-size: 12px;
+		border-top: 1px solid #f0f0f2;
+		color: #878c9c;
+		.el-button--small {
+			width: 100px;
+		}
+	}
+}

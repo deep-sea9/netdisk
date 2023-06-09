@@ -1,0 +1,28 @@
+@import "~css-vars/css-vars";
+
+$main_color: #06a7ff;
+//$main_color: #223511;
+$hover_color: #38b9ff;
+//$light_color: #d4f0ff;
+$light_color: #38b9ff;
+$side_width: 210px;
+$split_color: #dedede6b;
+
+$menu_item_color: #fff; //children 颜色
+$menu_item_hover: #f0f0f0; //children hover颜色
+$active_text_color: #06a7ff; //menu 激活的文本颜色
+$active_item_color: #d4f0ff; //menu 激活的背景色
+
+$css-vars-use-native: true;
+
+@include css-vars((
+  --main-color: $main_color,
+  --hover-color: $hover_color,
+  --light-color: $light_color,
+  --split-color: $split_color,
+  --menu-item-color: $menu_item_color,
+  --menu-item-hover: $menu_item_hover,
+  --menu-active_text_color: $active_text_color,
+  --menu-active_bg_color: $active_item_color,
+  --drag-select-bg-color: rgba(210, 210, 210, .2),
+));

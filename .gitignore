@@ -1,0 +1,8 @@
+node_modules
+dist
+
+#Electron-builder output
+dist_electron
+
+.gitlab-ci.yml
+docker

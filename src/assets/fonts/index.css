@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'MiSans';
+    src: url('./MiSans-Normal.43a81732.woff2');
+}
+*{
+    font-family: 'MiSans';
+}

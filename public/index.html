@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+		<link rel="stylesheet" href="lucksheet/plugins/css/pluginsCss.css">
+		<link rel="stylesheet" href="lucksheet/plugins/plugins.css">
+		<link rel="stylesheet" href="lucksheet/css/luckysheet.css">
+		<link rel="stylesheet" href="lucksheet/assets/iconfont/iconfont.css">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				list-style: none;
+				font-family: "puhui";
+			}
+
+			@keyframes spin3D {
+				from {
+					transform: rotate3d(.5, .5, .5, 360deg);
+				}
+				to {
+					transform: rotate3d(0, 0, 0, 0deg);
+				}
+			}
+
+			#loading-a {
+				width: 100%;
+				height: 100vh;
+				background-color: #000;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			.spinner-box {
+				width: 240px;
+				height: 240px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: transparent;
+			}
+
+			.leo {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+			}
+
+			.blue-orbit {
+				width: 165px;
+				height: 165px;
+				border: 1px solid #91daffa5;
+				animation: spin3D 3s linear .2s infinite;
+			}
+
+			.green-orbit {
+				width: 120px;
+				height: 120px;
+				border: 1px solid #91ffbfa5;
+				animation: spin3D 2s linear 0s infinite;
+			}
+
+			.red-orbit {
+				width: 90px;
+				height: 90px;
+				border: 1px solid #ffca91a5;
+				animation: spin3D 1s linear 0s infinite;
+			}
+
+			.white-orbit {
+				width: 60px;
+				height: 60px;
+				border: 2px solid #ffffff;
+				animation: spin3D 10s linear 0s infinite;
+			}
+
+			.w1 {
+				transform: rotate3D(1, 1, 1, 90deg);
+			}
+
+			.w2 {
+				transform: rotate3D(1, 2, .5, 90deg);
+			}
+
+			.w3 {
+				transform: rotate3D(.5, 1, 2, 90deg);
+			}
+
+			#loading-text {
+				color: white;
+				width: 100%;
+				text-align: center;
+				margin-top: 300px;
+				font-size: 14px;
+			}
+
+		</style>
+
+
+	</head>
+	<body>
+		<div id="app"></div>
+		<div id="loading-a">
+			<div class="spinner-box">
+				<div class="blue-orbit leo"></div>
+				<div class="green-orbit leo"></div>
+				<div class="red-orbit leo"></div>
+				<div class="white-orbit w1 leo"></div>
+				<div class="white-orbit w2 leo"></div>
+				<div class="white-orbit w3 leo"></div>
+				<div id="loading-text">
+					应用加载中，先做一套眼保健操吧...（1，2，3，4，5，6，7，8...）
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/webupload/crypto.js" defer></script>
+	<script src="js/webupload/crypto-sha256.js" defer></script>
+	<script src="js/webupload/filesha.js" defer></script>
+	<script src="js/jquery.min.js" defer></script>
+	<script src="lucksheet/plugins/js/plugin.js" defer></script>
+</html>
